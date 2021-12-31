@@ -9,10 +9,11 @@
 import Foundation
 
 // MARK: - Asset
-struct Asset: Codable {
+struct Asset: Codable,Identifiable {
+    let id = UUID()
     let assetID, name: String
     let typeIsCrypto: Int
-    let idIcon: String
+    let idIcon: String?
 
     enum CodingKeys: String, CodingKey {
         case assetID = "asset_id"

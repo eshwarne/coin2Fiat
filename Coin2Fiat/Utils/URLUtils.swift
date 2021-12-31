@@ -21,6 +21,7 @@ class URLUtils {
     }
     static func authHeaders() throws -> (header:String, value:String) {
         if let infoDict = Bundle.main.infoDictionary {
+            
             return("X-CoinAPI-Key", infoDict["COINAPI_API_SECRET_KEY"] as! String)
         } else {
             throw URLError.ApiKeyNotFound
