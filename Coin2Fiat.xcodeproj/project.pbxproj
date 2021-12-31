@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		F7A99C13277EE3AE001466E1 /* Coin2FiatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A99C12277EE3AE001466E1 /* Coin2FiatApp.swift */; };
-		F7A99C15277EE3AE001466E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A99C14277EE3AE001466E1 /* ContentView.swift */; };
+		F7A99C15277EE3AE001466E1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A99C14277EE3AE001466E1 /* HomeView.swift */; };
 		F7A99C17277EE3AE001466E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A99C16277EE3AE001466E1 /* Assets.xcassets */; };
 		F7A99C1A277EE3AE001466E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A99C19277EE3AE001466E1 /* Preview Assets.xcassets */; };
+		F7A99C24277EE7A4001466E1 /* CoinAssetsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A99C23277EE7A4001466E1 /* CoinAssetsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F7A99C0F277EE3AE001466E1 /* Coin2Fiat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coin2Fiat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A99C12277EE3AE001466E1 /* Coin2FiatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin2FiatApp.swift; sourceTree = "<group>"; };
-		F7A99C14277EE3AE001466E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F7A99C14277EE3AE001466E1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F7A99C16277EE3AE001466E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7A99C19277EE3AE001466E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7A99C23277EE7A4001466E1 /* CoinAssetsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinAssetsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,9 @@
 		F7A99C11277EE3AE001466E1 /* Coin2Fiat */ = {
 			isa = PBXGroup;
 			children = (
+				F7A99C21277EE791001466E1 /* Models */,
+				F7A99C20277EE783001466E1 /* Views */,
 				F7A99C12277EE3AE001466E1 /* Coin2FiatApp.swift */,
-				F7A99C14277EE3AE001466E1 /* ContentView.swift */,
 				F7A99C16277EE3AE001466E1 /* Assets.xcassets */,
 				F7A99C18277EE3AE001466E1 /* Preview Content */,
 			);
@@ -65,6 +68,30 @@
 				F7A99C19277EE3AE001466E1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F7A99C20277EE783001466E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7A99C14277EE3AE001466E1 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7A99C21277EE791001466E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7A99C22277EE796001466E1 /* Requests */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F7A99C22277EE796001466E1 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				F7A99C23277EE7A4001466E1 /* CoinAssetsData.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +164,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7A99C15277EE3AE001466E1 /* ContentView.swift in Sources */,
+				F7A99C15277EE3AE001466E1 /* HomeView.swift in Sources */,
 				F7A99C13277EE3AE001466E1 /* Coin2FiatApp.swift in Sources */,
+				F7A99C24277EE7A4001466E1 /* CoinAssetsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
