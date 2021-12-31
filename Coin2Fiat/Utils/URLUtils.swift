@@ -14,7 +14,7 @@ class URLUtils {
     static var coinApiBaseUrl = "https://rest.coinapi.io"
     static func iconUrl(iconId: String, iconSize:String = "512") -> String{
         let iconIdParsed = iconId.replacingOccurrences(of: "-", with: "")
-        return iconBaseUrl+"/png_\(iconSize)/\(iconIdParsed)"
+        return iconBaseUrl+"/png_\(iconSize)/\(iconIdParsed).png"
     }
     static func allAssetsUrl() -> String{
         return coinApiBaseUrl + "/v1/assets"
