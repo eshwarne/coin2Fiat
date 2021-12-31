@@ -6,6 +6,9 @@
 //
 
 import Foundation
+enum URLError: Error {
+    case ApiKeyNotFound
+}
 class URLUtils {
     private static var iconBaseUrl="https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id"
     static var coinApiBaseUrl = "https://rest.coinapi.io"
@@ -15,5 +18,12 @@ class URLUtils {
     }
     static func allAssetsUrl() -> String{
         return coinApiBaseUrl + "/v1/assets"
+    }
+    static func authHeaders() throws -> (header:String, value:String) {
+        if let infoDict = Bundle.main.infoDictionary {
+            return("X-CoinAPI-Key", infoDict["COINAPI_API_SECRET_KEY"] as! String)
+        } else {
+            throw URLError.ApiKeyNotFound
+        }
     }
 }

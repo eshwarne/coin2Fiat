@@ -25,7 +25,8 @@
 		F7A99C23277EE7A4001466E1 /* CoinAssetsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinAssetsData.swift; sourceTree = "<group>"; };
 		F7A99C26277EF58F001466E1 /* URLUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLUtils.swift; sourceTree = "<group>"; };
 		F7A99C28277EF755001466E1 /* CoinsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsListView.swift; sourceTree = "<group>"; };
-		F7A99C2C277EF9B8001466E1 /* CoinApiConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CoinApiConfig.xcconfig; sourceTree = "<group>"; };
+		F7A99C2D277EFAE5001466E1 /* CoinApiSecret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CoinApiSecret.xcconfig; sourceTree = "<group>"; };
+		F7A99C2E277EFB6F001466E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +59,14 @@
 		F7A99C11277EE3AE001466E1 /* Coin2Fiat */ = {
 			isa = PBXGroup;
 			children = (
+				F7A99C2E277EFB6F001466E1 /* Info.plist */,
 				F7A99C25277EF57D001466E1 /* Utils */,
 				F7A99C21277EE791001466E1 /* Models */,
 				F7A99C20277EE783001466E1 /* Views */,
 				F7A99C12277EE3AE001466E1 /* Coin2FiatApp.swift */,
 				F7A99C16277EE3AE001466E1 /* Assets.xcassets */,
 				F7A99C18277EE3AE001466E1 /* Preview Content */,
-				F7A99C2C277EF9B8001466E1 /* CoinApiConfig.xcconfig */,
+				F7A99C2D277EFAE5001466E1 /* CoinApiSecret.xcconfig */,
 			);
 			path = Coin2Fiat;
 			sourceTree = "<group>";
@@ -193,6 +195,7 @@
 /* Begin XCBuildConfiguration section */
 		F7A99C1B277EE3AE001466E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7A99C2D277EFAE5001466E1 /* CoinApiSecret.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -254,6 +257,7 @@
 		};
 		F7A99C1C277EE3AE001466E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7A99C2D277EFAE5001466E1 /* CoinApiSecret.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -318,6 +322,7 @@
 				DEVELOPMENT_TEAM = 7XTAV26QR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coin2Fiat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -347,6 +352,7 @@
 				DEVELOPMENT_TEAM = 7XTAV26QR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coin2Fiat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

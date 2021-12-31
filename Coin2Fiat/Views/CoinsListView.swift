@@ -16,7 +16,8 @@ class CoinsListViewModel {
             return
         }
         var urlRequest = URLRequest(url: url)
-        urlRequest.setValue("", forHTTPHeaderField: <#T##String#>)
+        let authHeaders = try! URLUtils.authHeaders()
+        urlRequest.setValue(authHeaders.value, forHTTPHeaderField: authHeaders.header)
         
     }
 }
