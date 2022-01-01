@@ -7,12 +7,12 @@
 
 import SwiftUI
 import Combine
+var twoColumnGrid = [GridItem(.flexible()), GridItem(.flexible())]
 class CoinsListViewModel: ObservableObject {
     @Published var coins: AssetsData = []
     @Published var hasLoaded = false;
     @Published var hasError = false
     init(){
-        print("EXEC")
         guard let url = URL(string: URLUtils.allAssetsUrl()) else {
             return
         }
@@ -59,13 +59,33 @@ class CoinsListViewModel: ObservableObject {
     }
        
 }
+
+let cardBackgroundColor = Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2724343844))
+let cardShadowColor = Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
+
 struct CoinsListView: View {
     @StateObject var coinsListVM = CoinsListViewModel.init()
     var body: some View {
         if coinsListVM.hasLoaded {
             if !coinsListVM.hasError {
-                List(coinsListVM.coins){ coin in
-                    CoinRowView(coin: coin)
+                ScrollView{
+                    LazyVGrid(columns: twoColumnGrid, spacing: 20){
+                        ForEach(coinsListVM.coins) { coin in
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 10, style: .circular)
+                                    .fill(.white)
+                                    .shadow(color:cardShadowColor, radius: 10, x: 0, y: 10)
+                                    .frame(height: 100 )
+                                    
+                                    
+                                CoinRowView(coin: coin)
+                                    .padding()
+                            }
+                            .padding()
+                          
+                           
+                        }
+                    }
                 }
             } else {
                 VStack{
